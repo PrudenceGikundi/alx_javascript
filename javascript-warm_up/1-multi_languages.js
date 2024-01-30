@@ -1,8 +1,6 @@
+//arrays in javascript
+let lang =["C is fun", "Python is cool", "JavaScript is amazing"]
 
-const firstline= "C is fun";
-const secondline= "Python is cool";
-const thirdline="JavaScript is amazing";
-
-console.log(firstline);
-console.log(secondline);
-console.log(thirdline);
+for (let i =0; i< lang.length; i++) {
+    console.log(lang[i]);
+}
