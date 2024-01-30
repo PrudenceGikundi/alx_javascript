@@ -4,7 +4,7 @@ class Square extends Square1 {
   charPrint(c){
     const char = c || 'X'
     for (let i= 0; i< this.height;i++)
-    console.log(chr.repeat(this.width));
+    console.log(char.repeat(this.width));
   };
  
  };
