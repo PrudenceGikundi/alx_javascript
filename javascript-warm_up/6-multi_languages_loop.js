@@ -1,6 +1,6 @@
-const words= ["C is fun","Python is cool","JavaScript is amazing"];
+//arrays in javascript
+let lang =["C is fun", "Python is cool", "JavaScript is amazing"]
 
-for(const _x of words)
-{
-  console.log(words);
-}
+for (let i =0; i< lang.length; i++) {
+    console.log(lang[i]);
+};

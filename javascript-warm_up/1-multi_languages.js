@@ -1,6 +1,9 @@
-//arrays in javascript
-let lang =["C is fun", "Python is cool", "JavaScript is amazing"]
+// Script that prints three outputs
 
-for (let i =0; i< lang.length; i++) {
-    console.log(lang[i]);
-}
+let firstChar = "C is fun";
+let secondChar = "Python is cool";
+let thirdChar = "JavaScript is amazing";
+
+console.log(firstChar);
+console.log(secondChar);
+console.log(thirdChar);
