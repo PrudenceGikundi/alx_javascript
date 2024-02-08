@@ -1,4 +1,4 @@
-// Script that prints the title po starwars movies episodes
+// Script that prints the title for starwars movies episodes
 
 const process = require('process')
 const request = require('request')
