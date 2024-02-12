@@ -31,7 +31,7 @@ harry.setName("Harry");
 for (let i = 0; i < 4; i++) {
   harry.rewardStudent();
 }
-console.log(harry.getScore()); // Output: Harry Potter: 4
+console.log(harry.getScore()); // Output: Harry: 4
 
 const draco = new StudentHogwarts("Draco");
 draco.setName("Draco");
