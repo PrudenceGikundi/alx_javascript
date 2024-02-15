@@ -1,0 +1,1 @@
+Understand how to create and manipulate cookies using Javascript
