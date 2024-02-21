@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Available Items</h1>
+  <ul id="available-items"></ul>
+
+  <hr>
+
+  <h1>Your Cart</h1>
+  <p id="cart-message"></p>
+  <script>
+    // Check if local storage is available
+if (!localStorage) {
+  alert("Sorry, your browser does not support Web storage. Try again with a better one");
+  return;
+}
+
+const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+const availableItemsList = document.getElementById("available-items");
+const cartMessage = document.getElementById("cart-message");
+
+// Create and display available items
+function createStore() {
+  availableItems.forEach((item) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = item;
+    listItem.addEventListener("click", () => addItemToCart(item));
+    availableItemsList.appendChild(listItem);
+  });
+}
+
+// Add item to cart and update local storage
+function addItemToCart(item) {
+  localStorage.setItem(item, true);
+  displayCart();
+}
+
+// Display items in cart from local storage
+function displayCart() {
+  let cartCount = 0;
+  for (const item in localStorage) {
+    if (item !== "length") {
+      cartCount++;
+    }
+  }
+
+  if (cartCount > 0) {
+    cartMessage.textContent = `You previously had ${cartCount} items in your cart.`;
+  } else {
+    cartMessage.textContent = "";
+  }
+}
+
+createStore(); // Call createStore on page load
+displayCart(); // Call displayCart on page load
+
+    // let availableItems = [Shampoo, Soap, Sponge, water]
+    // if (typeof(Storage)!=="undefined"){
+    //   createStore() 
+    //   displayCart()
+    // }
+    // else{
+    //   console.log("Sorry, your browser does not support Web storage. Try again with a better one");
+    // }
+    
+    // function addItemToCart(item){
+    //   localStorage.setItem(item,true);
+    // }
+    // function createStore(){
+    //   const ul_element = document.createElement("ul");
+    //   ul_element.appendChild(ul);
+    //   for (let i=0;i<=availableItems.length;i++);
+    //      let added_products= [""];
+    //      let available_products= availableItems+ added_products;
+    //      console.log(available_products);
+    //      item.addEventlistener("click", function(){
+    //       addItemToCart();
+    //      })
+    // }
+    // function displayCart(){
+    //   if (typeof(Storage)!=="undefined"){
+    //     //this block does nothing
+    //   }
+    //   else{
+    //    let par= document.createElement("p");
+    //    par.textContent="You previously had X items in your cart";
+    //    par.appendChild(body);
+    //   }
+    // }
+  </script>
+</body>
+</html>
